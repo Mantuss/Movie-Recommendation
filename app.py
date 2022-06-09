@@ -18,7 +18,7 @@ def recommend(movie):
 
 
 def fetchPoster(id):
-    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=aa6f35342e1d39acf1f89e68cc054008&language=en-US'.format(id))
+    response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=&language=en-US'.format(id))
     data = response.json()
     print(data)
     return "https://image.tmdb.org/t/p/w500" + str(data['poster_path'])
